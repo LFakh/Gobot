@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Screens/Sigmanore.tres" type="FontFile" id=1]
+
+[node name="Title" type="Label"]
+anchor_left = 0.5
+anchor_top = 0.348
+anchor_right = 0.5
+anchor_bottom = 0.348
+offset_left = -441.861
+offset_top = -92.6598
+offset_right = 461.139
+offset_bottom = -7.65979
+theme_override_fonts/font = ExtResource( 1 )
+text = "Welcome To The Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

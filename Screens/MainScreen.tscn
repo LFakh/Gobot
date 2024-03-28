@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddgx8oww8h31b"]
+
+[ext_resource type="PackedScene" path="res://User_Interface/Title.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://User_Interface/Play_BTN.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://o8et0lgqhrmu" path="res://cavedude.png" id="2_cyf7v"]
+[ext_resource type="PackedScene" path="res://User_Interface/Quit_BTN.tscn" id="3"]
+[ext_resource type="Theme" path="res://Screens/new_Sigmanore.tres" id="5"]
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchor_right = 0.997
+anchor_bottom = 1.004
+offset_right = 0.399963
+offset_bottom = 0.0799561
+theme = ExtResource("5")
+
+[node name="Backgroud" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_cyf7v")
+expand_mode = 1
+
+[node name="Title" parent="." instance=ExtResource("1")]
+layout_mode = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -372.0
+offset_top = -52.736
+offset_right = 371.0
+offset_bottom = 32.264
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = -38.0
+offset_right = 291.0
+offset_bottom = 115.0
+scale = Vector2(0.723927, 0.695371)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Play_BTN" parent="Menu" instance=ExtResource("2")]
+layout_mode = 2
+next_scene_path = "res://S.tscn"
+
+[node name="Quit_BTN" parent="Menu" instance=ExtResource("3")]
+layout_mode = 2

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://User_Interface/Quit_BTN.gd" type="Script" id=1]
+
+[node name="Quit_BTN" type="Button"]
+offset_top = 159.0
+offset_right = 731.0
+offset_bottom = 314.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Quit"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="." to="." method="_on_Quit_BTN_button_up"]

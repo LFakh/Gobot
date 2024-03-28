@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Screens/new_Sigmanore.tres" type="Theme" id=1]
+[ext_resource path="res://User_Interface/User_Interface.gd" type="Script" id=2]
+[ext_resource path="res://User_Interface/Quit_BTN.tscn" type="PackedScene" id=5]
+[ext_resource path="res://User_Interface/MainMenu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://User_Interface/Retry.tscn" type="PackedScene" id=8]
+
+[node name="User_Interface" type="Control"]
+process_mode = 3
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -240.0
+offset_right = 400.0
+offset_bottom = 240.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UR_score" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -142.0
+offset_bottom = 41.0
+text = "score %s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseOverlay" type="ColorRect" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -240.0
+offset_right = 400.0
+offset_bottom = 240.0
+color = Color( 0, 0, 0, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pause" type="Label" parent="PauseOverlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = -132.5
+offset_right = 53.0
+offset_bottom = -91.5
+text = "Paused"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseMenu" type="VBoxContainer" parent="PauseOverlay"]
+process_mode = 3
+light_mask = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.0
+offset_top = -74.5
+offset_right = 141.0
+offset_bottom = 74.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play_BTN" parent="PauseOverlay/PauseMenu" instance=ExtResource( 8 )]
+offset_right = 282.0
+offset_bottom = 47.0
+
+[node name="Play_BTN2" parent="PauseOverlay/PauseMenu" instance=ExtResource( 6 )]
+offset_top = 51.0
+offset_right = 282.0
+offset_bottom = 98.0
+
+[node name="Quit_BTN" parent="PauseOverlay/PauseMenu" instance=ExtResource( 5 )]
+process_mode = 3
+offset_top = 102.0
+offset_right = 282.0
+offset_bottom = 149.0

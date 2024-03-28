@@ -1,0 +1,15 @@
+res://Screens/MainScreen.tscn
+res://player/Player.tscn
+res://S.tscn
+res://coin/Coin.tscn
+res://Stage.tscn
+res://sand.tscn
+res://background/ParallBg.tscn
+res://User_Interface/EndScreen.tscn
+res://background/ParallaxBg.tscn
+res://TileSet.tres
+res://TileS.tres
+res://sahara.tscn
+res://TilesEdit.tscn
+res://enemy/Enemy.tscn
+res://User_Interface/User_Interface.gd

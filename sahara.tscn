@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnpbxjlr73w0"]
+
+[ext_resource type="PackedScene" uid="uid://cv5mv38ykxexm" path="res://sand.tscn" id="1_fj2p2"]
+[ext_resource type="TileSet" uid="uid://cidfn2ymshqnt" path="res://TileS.tres" id="2_ciebs"]
+[ext_resource type="PackedScene" uid="uid://hpq4vblxhyti" path="res://Stage.tscn" id="3_lp0wj"]
+[ext_resource type="Texture2D" uid="uid://dibyuske3dm81" path="res://sky.jpg" id="4_w3l37"]
+
+[node name="Stage" instance=ExtResource("1_fj2p2")]
+
+[node name="Portal2D" parent="." index="0"]
+position = Vector2(3008, 576)
+next_scene = ExtResource("3_lp0wj")
+
+[node name="TileMap2" parent="." index="1"]
+modulate = Color(0.823529, 0.835294, 0.831373, 1)
+tile_set = ExtResource("2_ciebs")
+
+[node name="TileMap" parent="." index="2"]
+modulate = Color(0.835294, 0.839216, 0.839216, 1)
+tile_set = ExtResource("2_ciebs")
+
+[node name="OneWayPlatform12" parent="Props" index="20"]
+position = Vector2(1120, 920)
+
+[node name="Desert" parent="Parall/Sky" index="0"]
+texture = ExtResource("4_w3l37")
+
+[node name="Clouds" parent="Parall" index="1"]
+modulate = Color(0.690196, 0.709804, 0.713726, 1)
+
+[node name="Mount2" parent="Parall" index="2"]
+visible = false
+
+[node name="Sprite2D" parent="Parall/Mount2" index="0"]
+visible = true
