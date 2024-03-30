@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://dsww5lgq5jdj4"]
 
 [ext_resource type="PackedScene" path="res://Portal2D.tscn" id="1_4j5sm"]
-[ext_resource type="PackedScene" uid="uid://lo5t70bo6snu" path="res://sand.tscn" id="2_c62ta"]
+[ext_resource type="PackedScene" uid="uid://hpq4vblxhyti" path="res://Stage.tscn" id="2_lc5bq"]
 [ext_resource type="TileSet" uid="uid://cidfn2ymshqnt" path="res://TileS.tres" id="3_6idel"]
 [ext_resource type="PackedScene" uid="uid://cu8xf47uhn1mg" path="res://coin/Coin.tscn" id="4_xgaw6"]
 [ext_resource type="Script" path="res://platform/moving_platform.gd" id="5_erjo7"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dh7rmirdwogj3" path="res://platform/one_way_PP.png" id="7_qocbh"]
 [ext_resource type="PackedScene" uid="uid://b1illhvyk7w4m" path="res://player/Player.tscn" id="8_4vfsk"]
 [ext_resource type="Texture2D" uid="uid://d1x0y8bmtng2x" path="res://background/scroll_bg_cloud_1.png" id="10_4fdl2"]
-[ext_resource type="Texture2D" uid="uid://dibyuske3dm81" path="res://sky.jpg" id="10_jjasi"]
+[ext_resource type="Texture2D" uid="uid://dnbfjbfuftjxj" path="res://desert.png" id="10_870k4"]
 [ext_resource type="Texture2D" uid="uid://bwyy4ex46w50o" path="res://background/scroll_bg_cloud_2.png" id="11_lfygs"]
 [ext_resource type="Texture2D" uid="uid://bbftglgbagek0" path="res://background/scroll_bg_cloud_3.png" id="12_o1b84"]
 [ext_resource type="Texture2D" uid="uid://doldibgp65ocb" path="res://background/scroll_bg_fg_2.png" id="13_s2bqy"]
@@ -24,7 +24,7 @@ size = Vector2(200, 20)
 
 [node name="Portal2D" parent="." instance=ExtResource("1_4j5sm")]
 position = Vector2(6416, 2312)
-next_scene = ExtResource("2_c62ta")
+next_scene = ExtResource("2_lc5bq")
 
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = ExtResource("3_6idel")
@@ -196,7 +196,7 @@ metadata/_edit_lock_ = true
 [node name="Desert" type="Sprite2D" parent="Para/Sky"]
 position = Vector2(399.183, 238.154)
 scale = Vector2(1.10611, 1.06492)
-texture = ExtResource("10_jjasi")
+texture = ExtResource("10_870k4")
 metadata/_edit_lock_ = true
 
 [node name="Clouds" type="ParallaxLayer" parent="Para"]

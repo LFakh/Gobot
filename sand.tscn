@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://d4nvtpqlmhnar" path="res://TileSet.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://cu8xf47uhn1mg" path="res://coin/Coin.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://hpq4vblxhyti" path="res://Stage.tscn" id="2_xa3lx"]
+[ext_resource type="PackedScene" uid="uid://dsww5lgq5jdj4" path="res://ss.tscn" id="2_ef3ta"]
 [ext_resource type="PackedScene" uid="uid://nh657li2cc5c" path="res://platform/MovingPlatform.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://platform/OneWayPlatform.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://b1illhvyk7w4m" path="res://player/Player.tscn" id="5"]
@@ -18,7 +18,7 @@
 modulate = Color(0.345098, 1, 0.329412, 1)
 position = Vector2(2896, 456)
 collision_layer = 3
-next_scene = ExtResource("2_xa3lx")
+next_scene = ExtResource("2_ef3ta")
 
 [node name="EndScreen" parent="Portal2D" instance=ExtResource("9")]
 visible = false
