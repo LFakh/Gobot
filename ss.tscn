@@ -1,0 +1,279 @@
+[gd_scene load_steps=18 format=3 uid="uid://dsww5lgq5jdj4"]
+
+[ext_resource type="PackedScene" path="res://Portal2D.tscn" id="1_4j5sm"]
+[ext_resource type="PackedScene" uid="uid://lo5t70bo6snu" path="res://sand.tscn" id="2_c62ta"]
+[ext_resource type="TileSet" uid="uid://cidfn2ymshqnt" path="res://TileS.tres" id="3_6idel"]
+[ext_resource type="PackedScene" uid="uid://cu8xf47uhn1mg" path="res://coin/Coin.tscn" id="4_xgaw6"]
+[ext_resource type="Script" path="res://platform/moving_platform.gd" id="5_erjo7"]
+[ext_resource type="Texture2D" uid="uid://c7jt17fk8ak7v" path="res://platform/moving_PP.png" id="6_1mj0b"]
+[ext_resource type="PackedScene" uid="uid://b2fmefqynrlnp" path="res://enemy/Enemy.tscn" id="7_moued"]
+[ext_resource type="Texture2D" uid="uid://dh7rmirdwogj3" path="res://platform/one_way_PP.png" id="7_qocbh"]
+[ext_resource type="PackedScene" uid="uid://b1illhvyk7w4m" path="res://player/Player.tscn" id="8_4vfsk"]
+[ext_resource type="Texture2D" uid="uid://d1x0y8bmtng2x" path="res://background/scroll_bg_cloud_1.png" id="10_4fdl2"]
+[ext_resource type="Texture2D" uid="uid://dibyuske3dm81" path="res://sky.jpg" id="10_jjasi"]
+[ext_resource type="Texture2D" uid="uid://bwyy4ex46w50o" path="res://background/scroll_bg_cloud_2.png" id="11_lfygs"]
+[ext_resource type="Texture2D" uid="uid://bbftglgbagek0" path="res://background/scroll_bg_cloud_3.png" id="12_o1b84"]
+[ext_resource type="Texture2D" uid="uid://doldibgp65ocb" path="res://background/scroll_bg_fg_2.png" id="13_s2bqy"]
+[ext_resource type="Texture2D" uid="uid://duq4rqeijl1mh" path="res://background/scroll_bg_fg_1.png" id="14_ery5c"]
+[ext_resource type="PackedScene" uid="uid://w4ccos5ofjoi" path="res://User_Interface/User_Interface.tscn" id="15_yetue"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(200, 20)
+
+[node name="SS" type="Node"]
+
+[node name="Portal2D" parent="." instance=ExtResource("1_4j5sm")]
+position = Vector2(6416, 2312)
+next_scene = ExtResource("2_c62ta")
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource("3_6idel")
+format = 2
+layer_0/tile_data = PackedInt32Array(1310720, 10, 65536, 1310721, 10, 65536, 1310722, 10, 65536, 1310723, 10, 65536, 1310724, 10, 65536, 1310725, 10, 65536, 1310726, 10, 65536, 1310727, 10, 65536, 1376263, 10, 65536, 1376262, 10, 65536, 1376261, 10, 65536, 1376260, 10, 65536, 1376259, 10, 65536, 1376258, 10, 65536, 1376257, 10, 65536, 1376256, 10, 65536, 1441792, 10, 65536, 1441793, 10, 65536, 1441794, 10, 65536, 1441795, 10, 65536, 1441796, 10, 65536, 1441797, 10, 65536, 1441798, 10, 65536, 1441799, 10, 65536, 1376270, 10, 65536, 1376271, 10, 65536, 1376272, 10, 65536, 1376273, 10, 65536, 1376274, 10, 65536, 1441810, 10, 65536, 1507346, 10, 65536, 1507345, 10, 65536, 1441809, 10, 65536, 1441808, 10, 65536, 1441807, 10, 65536, 1441806, 10, 65536, 1507342, 10, 65536, 1507343, 10, 65536, 1507344, 10, 65536, 1376276, 12, 458752, 1441813, 12, 458752, 1507350, 12, 458752, 1572887, 12, 458752, 1638424, 12, 458752, 1703961, 12, 458752, 1835035, 11, 65536, 1835036, 11, 65536, 1835037, 11, 65536, 1835038, 11, 65536, 1835039, 11, 65536, 1835040, 11, 65536, 1376275, 14, 65536, 1441811, 2, 65536, 1441812, 2, 65536, 1507348, 2, 65536, 1507347, 2, 65536, 1572884, 2, 65536, 1572885, 2, 65536, 1507349, 2, 65536, 1572886, 2, 65536, 1638422, 2, 65536, 1638423, 2, 65536, 1703959, 2, 65536, 1703960, 2, 65536, 1769496, 2, 65536, 1769497, 2, 65536, 1835034, 2, 65536, 1835033, 2, 65536, 1572883, 2, 65536, 1638419, 2, 65536, 1638420, 2, 65536, 1638421, 2, 65536, 1703958, 2, 65536, 1769495, 2, 65536, 1835032, 2, 65536, 1835031, 2, 65536, 1835030, 2, 65536, 1769494, 2, 65536, 1769493, 2, 65536, 1703957, 2, 65536, 1703956, 2, 65536, 1638418, 2, 65536, 1638417, 2, 65536, 1572881, 2, 65536, 1572882, 2, 65536, 1900571, 2, 65536, 1900572, 2, 65536, 1900573, 2, 65536, 1900574, 2, 65536, 1900575, 2, 65536, 1966111, 2, 65536, 1966112, 2, 65536, 1900576, 2, 65536, 1966110, 2, 65536, 1966109, 2, 65536, 1966108, 2, 65536, 2031644, 2, 65536, 2031643, 2, 65536, 1966107, 2, 65536, 2031645, 2, 65536, 2031646, 2, 65536, 2031648, 2, 65536, 2031647, 2, 65536, 1900570, 2, 65536, 1900569, 2, 65536, 1966106, 2, 65536, 1966105, 2, 65536, 1900568, 2, 65536, 1769498, 12, 458752, 1966128, 6, 65536, 1966129, 6, 65536, 1966130, 6, 65536, 1966131, 6, 65536, 1966132, 6, 65536, 1966133, 6, 65536, 2031664, 10, 65536, 2031665, 10, 65536, 2031666, 10, 65536, 2031667, 10, 65536, 2031668, 10, 65536, 2031669, 10, 65536, 2097205, 10, 65536, 2162741, 10, 65536, 2097204, 10, 65536, 2097203, 10, 65536, 2097202, 10, 65536, 2097201, 10, 65536, 2097200, 10, 65536, 2162736, 10, 65536, 2162737, 10, 65536, 2162738, 10, 65536, 2162739, 10, 65536, 2162740, 10, 65536, 2228272, 10, 65536, 2228273, 10, 65536, 2228274, 10, 65536, 2228275, 10, 65536, 2228276, 10, 65536, 2228277, 10, 65536, 2359380, 10, 65536, 2359381, 10, 65536, 2359382, 10, 65536, 2359383, 10, 65536, 2359384, 10, 65536, 2359385, 10, 65536, 2359386, 10, 65536, 2359387, 10, 65536, 2424923, 10, 65536, 2424922, 10, 65536, 2424921, 10, 65536, 2424920, 10, 65536, 2424919, 10, 65536, 2424918, 10, 65536, 2424917, 10, 65536, 2424916, 10, 65536, 2490453, 10, 65536, 2555988, 10, 65536, 2490452, 10, 65536, 2555989, 10, 65536, 2555990, 10, 65536, 2555991, 10, 65536, 2555992, 10, 65536, 2490456, 10, 65536, 2490457, 10, 65536, 2490458, 10, 65536, 2555994, 10, 65536, 2555995, 10, 65536, 2490459, 10, 65536, 2555993, 10, 65536, 2490455, 10, 65536, 2490454, 10, 65536, 2293844, 6, 65536, 2293845, 6, 65536, 2293846, 6, 65536, 2293847, 6, 65536, 2293848, 6, 65536, 2293849, 6, 65536, 2293850, 6, 65536, 2293851, 6, 65536, 2424928, 6, 65536, 2424929, 6, 65536, 2424930, 6, 65536, 2424931, 6, 65536, 2424932, 6, 65536, 2490464, 10, 65536, 2490465, 10, 65536, 2490466, 10, 65536, 2490467, 10, 65536, 2490468, 10, 65536, 2556004, 10, 65536, 2556003, 10, 65536, 2556002, 10, 65536, 2556001, 10, 65536, 2556000, 10, 65536, 2621536, 10, 65536, 2621537, 10, 65536, 2621538, 10, 65536, 2621539, 10, 65536, 2621540, 10, 65536, 2228322, 9, 65536, 2228321, 9, 65536, 2031706, 9, 65536)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-1, 0)
+tile_set = ExtResource("3_6idel")
+format = 2
+layer_0/tile_data = PackedInt32Array(1245184, 5, 65536, 1245185, 5, 65536, 1245186, 5, 65536, 1245187, 5, 65536, 1245188, 5, 65536, 1245189, 5, 65536, 1245190, 5, 65536, 1245191, 5, 65536, 1310734, 5, 65536, 1310735, 5, 65536, 1310736, 5, 65536, 1310737, 5, 65536, 1310738, 5, 65536, 1114128, 9, 65536, 1114129, 9, 65536, 1114127, 9, 65536, 1048582, 9, 65536, 1179663, 8, 65536, 1245199, 8, 65536, 1179664, 8, 65536, 1245200, 8, 65536, 1245201, 8, 65536, 1179665, 8, 65536, 1179654, 8, 65536, 1114118, 8, 65536, 1179648, 15, 458752, 1114112, 15, 458752, 1048576, 15, 458752, 983040, 15, 458752, 851968, 15, 458752, 917504, 15, 458752, 786432, 15, 458752, 720896, 15, 458752, 655360, 15, 458752, 589824, 15, 458752, 524288, 15, 458752, 458752, 15, 458752, 2293858, 7, 65536, 2359394, 7, 65536, 2293857, 7, 65536, 2359393, 7, 65536, 2097242, 7, 65536, 2162778, 7, 65536, 2228314, 7, 65536)
+
+[node name="coins" type="Node" parent="."]
+
+[node name="Coin" parent="coins" instance=ExtResource("4_xgaw6")]
+position = Vector2(696, 1120)
+
+[node name="Coin3" parent="coins" instance=ExtResource("4_xgaw6")]
+position = Vector2(1024, 1216)
+
+[node name="Coin4" parent="coins" instance=ExtResource("4_xgaw6")]
+position = Vector2(1520, 1408)
+
+[node name="Coin5" parent="coins" instance=ExtResource("4_xgaw6")]
+position = Vector2(1832, 1712)
+
+[node name="Coin6" parent="coins" instance=ExtResource("4_xgaw6")]
+position = Vector2(1944, 1744)
+
+[node name="Coin7" parent="coins" instance=ExtResource("4_xgaw6")]
+position = Vector2(2016, 1724)
+
+[node name="Coin8" parent="coins" instance=ExtResource("4_xgaw6")]
+position = Vector2(3176, 1856)
+
+[node name="Coin9" parent="coins" instance=ExtResource("4_xgaw6")]
+position = Vector2(3328, 1866)
+
+[node name="Coin11" parent="coins" instance=ExtResource("4_xgaw6")]
+position = Vector2(5712, 2164)
+
+[node name="Coin10" parent="coins" instance=ExtResource("4_xgaw6")]
+position = Vector2(5520, 2184)
+
+[node name="Coin2" parent="coins" instance=ExtResource("4_xgaw6")]
+position = Vector2(336, 1184)
+
+[node name="props" type="Node" parent="."]
+
+[node name="MovingPlatform2" type="Node2D" parent="props"]
+modulate = Color(0.631373, 0.615686, 0.631373, 1)
+position = Vector2(3840, 2008)
+script = ExtResource("5_erjo7")
+motion = Vector2(280, 45)
+cycle = 2.5
+metadata/_edit_group_ = true
+
+[node name="Platform" type="CharacterBody2D" parent="props/MovingPlatform2"]
+
+[node name="Sprite2D" type="Sprite2D" parent="props/MovingPlatform2/Platform"]
+texture = ExtResource("6_1mj0b")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="props/MovingPlatform2/Platform"]
+z_index = 1
+polygon = PackedVector2Array(-88, -24, 88, -24, 88, 24, -88, 24)
+
+[node name="OneWayPlatform" type="StaticBody2D" parent="props"]
+position = Vector2(688, 1200)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="props/OneWayPlatform"]
+texture = ExtResource("7_qocbh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="props/OneWayPlatform"]
+position = Vector2(8.00003, -16)
+shape = SubResource("1")
+one_way_collision = true
+
+[node name="OneWayPlatform" type="StaticBody2D" parent="props/OneWayPlatform"]
+position = Vector2(1624, 568)
+
+[node name="Sprite2D" type="Sprite2D" parent="props/OneWayPlatform/OneWayPlatform"]
+texture = ExtResource("7_qocbh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="props/OneWayPlatform/OneWayPlatform"]
+position = Vector2(8.00003, -16)
+shape = SubResource("1")
+one_way_collision = true
+
+[node name="OneWayPlatform" type="StaticBody2D" parent="props/OneWayPlatform/OneWayPlatform"]
+position = Vector2(269.235, 195.536)
+
+[node name="Sprite2D" type="Sprite2D" parent="props/OneWayPlatform/OneWayPlatform/OneWayPlatform"]
+texture = ExtResource("7_qocbh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="props/OneWayPlatform/OneWayPlatform/OneWayPlatform"]
+position = Vector2(8.00003, -16)
+shape = SubResource("1")
+one_way_collision = true
+
+[node name="OneWayPlatform" type="StaticBody2D" parent="props/OneWayPlatform/OneWayPlatform/OneWayPlatform"]
+position = Vector2(330.765, -131.536)
+
+[node name="Sprite2D" type="Sprite2D" parent="props/OneWayPlatform/OneWayPlatform/OneWayPlatform/OneWayPlatform"]
+texture = ExtResource("7_qocbh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="props/OneWayPlatform/OneWayPlatform/OneWayPlatform/OneWayPlatform"]
+position = Vector2(8.00003, -16)
+shape = SubResource("1")
+one_way_collision = true
+
+[node name="MovingPlatform" type="Node2D" parent="."]
+modulate = Color(0.631373, 0.615686, 0.631373, 1)
+position = Vector2(4448, 2139)
+script = ExtResource("5_erjo7")
+motion = Vector2(280, 100)
+cycle = 3.6
+metadata/_edit_group_ = true
+
+[node name="Platform" type="CharacterBody2D" parent="MovingPlatform"]
+
+[node name="Sprite2D" type="Sprite2D" parent="MovingPlatform/Platform"]
+texture = ExtResource("6_1mj0b")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MovingPlatform/Platform"]
+z_index = 1
+polygon = PackedVector2Array(-88, -24, 88, -24, 88, 24, -88, 24)
+
+[node name="MovingPlatform2" type="Node2D" parent="."]
+modulate = Color(0.631373, 0.615686, 0.631373, 1)
+position = Vector2(5096, 2268)
+script = ExtResource("5_erjo7")
+motion = Vector2(175, 65)
+cycle = 4.2
+metadata/_edit_group_ = true
+
+[node name="Platform" type="CharacterBody2D" parent="MovingPlatform2"]
+
+[node name="Sprite2D" type="Sprite2D" parent="MovingPlatform2/Platform"]
+texture = ExtResource("6_1mj0b")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MovingPlatform2/Platform"]
+z_index = 1
+polygon = PackedVector2Array(-88, -24, 88, -24, 88, 24, -88, 24)
+
+[node name="enemy" type="Node" parent="."]
+
+[node name="Enemy" parent="enemy" instance=ExtResource("7_moued")]
+position = Vector2(1034, 1144)
+
+[node name="Enemy2" parent="enemy" instance=ExtResource("7_moued")]
+position = Vector2(5576.93, 2148.17)
+
+[node name="Enemy3" parent="enemy" instance=ExtResource("7_moued")]
+position = Vector2(3247, 1672)
+
+[node name="Player" parent="." instance=ExtResource("8_4vfsk")]
+position = Vector2(192, 1152)
+
+[node name="Para" type="ParallaxBackground" parent="."]
+scale = Vector2(1.5, 1.5)
+transform = Transform2D(1.5, 0, 0, 1.5, 0, 0)
+scroll_base_scale = Vector2(0.5, 0)
+
+[node name="Sky" type="ParallaxLayer" parent="Para"]
+motion_mirroring = Vector2(800, 0)
+metadata/_edit_lock_ = true
+
+[node name="Desert" type="Sprite2D" parent="Para/Sky"]
+position = Vector2(399.183, 238.154)
+scale = Vector2(1.10611, 1.06492)
+texture = ExtResource("10_jjasi")
+metadata/_edit_lock_ = true
+
+[node name="Clouds" type="ParallaxLayer" parent="Para"]
+modulate = Color(0.980392, 0.65098, 0.65098, 1)
+self_modulate = Color(1, 0.203922, 0.164706, 1)
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(800, 0)
+metadata/_edit_lock_ = true
+
+[node name="Sprite1" type="Sprite2D" parent="Para/Clouds"]
+position = Vector2(28, 127)
+texture = ExtResource("10_4fdl2")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite2" type="Sprite2D" parent="Para/Clouds"]
+position = Vector2(404, 24)
+texture = ExtResource("10_4fdl2")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite3" type="Sprite2D" parent="Para/Clouds"]
+position = Vector2(154, 46)
+texture = ExtResource("11_lfygs")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite4" type="Sprite2D" parent="Para/Clouds"]
+position = Vector2(525, 130)
+texture = ExtResource("11_lfygs")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite5" type="Sprite2D" parent="Para/Clouds"]
+position = Vector2(255, 158)
+texture = ExtResource("12_o1b84")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite6" type="Sprite2D" parent="Para/Clouds"]
+position = Vector2(674, 70)
+texture = ExtResource("12_o1b84")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Mount2" type="ParallaxLayer" parent="Para"]
+visible = false
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(800, 0)
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Para/Mount2"]
+visible = false
+position = Vector2(0, 225)
+texture = ExtResource("13_s2bqy")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 800, 256)
+metadata/_edit_lock_ = true
+
+[node name="Mount1" type="ParallaxLayer" parent="Para"]
+visible = false
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(800, 0)
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Para/Mount1"]
+visible = false
+position = Vector2(0, 225)
+texture = ExtResource("14_ery5c")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 800, 256)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="User_Interface" parent="CanvasLayer" instance=ExtResource("15_yetue")]
+metadata/_edit_lock_ = true

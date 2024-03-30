@@ -17,9 +17,9 @@ func _ready() -> void:
 	scene_tree.paused = false
 	pause_overlay.visible = false
 
-func _on_PlayerData_player_died() -> void:
-	self.paused = true
-	pause_title.text = "You Died"
+#func _on_PlayerData_player_died() -> void:
+	#self.paused = true
+	#pause_title.text = "You Died"
 
 func update_interface() -> void:
 	score.text = "score %s" %PlayerData.score
@@ -27,7 +27,7 @@ func update_interface() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
 		self.paused = not paused
-		scene_tree.set_input_as_handled()
+		#scene_tree.set_input_as_handled()
 
 
 func set_paused(value: bool) ->void:

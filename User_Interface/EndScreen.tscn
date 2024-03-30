@@ -2,10 +2,10 @@
 
 [ext_resource type="Theme" path="res://Screens/new_Sigmanore.tres" id="1"]
 [ext_resource type="Script" path="res://User_Interface/EndScreen.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bq1nihn63i5en" path="res://background/peace.png" id="3_gd4ad"]
 [ext_resource type="PackedScene" path="res://User_Interface/Title.tscn" id="5"]
 [ext_resource type="PackedScene" path="res://User_Interface/Quit_BTN.tscn" id="6"]
 [ext_resource type="PackedScene" path="res://User_Interface/Play_BTN.tscn" id="7"]
-[ext_resource type="Texture2D" path="res://oQx96MN.jpg" id="8"]
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3
@@ -27,7 +27,7 @@ script = ExtResource("2")
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource("8")
+texture = ExtResource("3_gd4ad")
 expand_mode = 1
 
 [node name="Title" parent="." instance=ExtResource("5")]

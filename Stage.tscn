@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ck0kttnxexh3g" path="res://roo.png" id="9"]
 [ext_resource type="Texture2D" uid="uid://1gctigdmqc6c" path="res://roob.png" id="10"]
 [ext_resource type="PackedScene" path="res://Portal2D.tscn" id="11"]
-[ext_resource type="PackedScene" path="res://User_Interface/User_Interface.tscn" id="13"]
+[ext_resource type="PackedScene" uid="uid://w4ccos5ofjoi" path="res://User_Interface/User_Interface.tscn" id="13"]
 
 [node name="Stage" type="Node"]
 
@@ -286,7 +286,3 @@ autoplay = true
 [node name="User_Interface" type="CanvasLayer" parent="."]
 
 [node name="User_Interface" parent="User_Interface" instance=ExtResource("13")]
-layout_mode = 3
-anchors_preset = 8
-grow_horizontal = 2
-grow_vertical = 2

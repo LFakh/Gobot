@@ -1,6 +1,5 @@
-[gd_resource type="TileSet" load_steps=19 format=3 uid="uid://cidfn2ymshqnt"]
+[gd_resource type="TileSet" load_steps=18 format=3 uid="uid://cidfn2ymshqnt"]
 
-[ext_resource type="Texture2D" uid="uid://ufl5e3yg24hn" path="res://tiles_demo.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://yuesy6sni1lm" path="res://tiles_2.png" id="1_nkpbt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gybgu"]
@@ -438,7 +437,7 @@ texture_region_size = Vector2i(64, 64)
 texture = ExtResource("1_nkpbt")
 margins = Vector2i(128, 128)
 texture_region_size = Vector2i(64, 128)
-0:0/next_alternative_id = 8
+0:0/next_alternative_id = 11
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -483,6 +482,15 @@ texture_region_size = Vector2i(64, 128)
 0:0/7/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/7/physics_layer_0/angular_velocity = 0.0
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(56, 32, -8, -32, -64, -32, -64, 32)
+0:0/8 = 8
+0:0/8/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/8/physics_layer_0/angular_velocity = 0.0
+0:0/9 = 9
+0:0/9/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/9/physics_layer_0/angular_velocity = 0.0
+0:0/10 = 10
+0:0/10/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/10/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4sck"]
 texture = ExtResource("1_nkpbt")
@@ -585,7 +593,7 @@ texture_region_size = Vector2i(64, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(24, -32, -24, -32, -24, 32, 24, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_32swf"]
-texture = ExtResource("1")
+texture = ExtResource("1_nkpbt")
 margins = Vector2i(192, 0)
 texture_region_size = Vector2i(64, 64)
 0:0/next_alternative_id = 8
@@ -675,6 +683,15 @@ texture_region_size = Vector2i(64, 64)
 2:3/0 = 0
 2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:3/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_umfas"]
 texture = ExtResource("1_nkpbt")

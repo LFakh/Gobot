@@ -23,7 +23,7 @@ func _get_configuration_warnings() -> PackedStringArray:
 #func teleport() -> void:
 #	if body.is_in_group("player"):
 #		anim_player.play("fade_in")
-#	yield(anim_player, "animation_finished")
+#	await(anim_player, "animation_finished")
 
 func next_level():
 	var ERR = get_tree().change_scene_to_packed(next_scene)

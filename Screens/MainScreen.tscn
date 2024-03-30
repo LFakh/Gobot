@@ -48,7 +48,7 @@ size_flags_vertical = 3
 
 [node name="Play_BTN" parent="Menu" instance=ExtResource("2")]
 layout_mode = 2
-next_scene_path = "res://S.tscn"
+next_scene_path = "res://ss.tscn"
 
 [node name="Quit_BTN" parent="Menu" instance=ExtResource("3")]
 layout_mode = 2
