@@ -15,9 +15,10 @@ scale = Vector2(2, 2)
 motion_mirroring = Vector2(800, 0)
 
 [node name="artwork-fantasy-art-concept-art-sky-wallpaper-preview" type="Sprite2D" parent="Sky"]
-position = Vector2(410.543, 223.386)
-scale = Vector2(1.11236, 1.0749)
+position = Vector2(440.822, 223.386)
+scale = Vector2(1.19554, 1.0749)
 texture = ExtResource("1")
+flip_h = true
 
 [node name="Clouds" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.1, 1)
@@ -60,24 +61,26 @@ texture = ExtResource("4")
 centered = false
 
 [node name="Mount2" type="ParallaxLayer" parent="."]
+scale = Vector2(2, 2)
 motion_scale = Vector2(0.2, 1)
 motion_mirroring = Vector2(800, 0)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Mount2"]
-visible = false
-position = Vector2(0, 225)
+scale = Vector2(1, 1.73438)
 texture = ExtResource("5")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 800, 256)
 
 [node name="Mount1" type="ParallaxLayer" parent="."]
+scale = Vector2(2, 2)
 motion_scale = Vector2(0.4, 1)
 motion_mirroring = Vector2(800, 0)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Mount1"]
-visible = false
-position = Vector2(0, 225)
+scale = Vector2(1, 1.75)
 texture = ExtResource("6")
 centered = false
 region_enabled = true
