@@ -1,9 +1,10 @@
-res://background/ParallaxBg.tscn
+res://Stage.tscn
 res://TileSet.tres
 res://TileS.tres
+res://gg.tscn
 res://Screens/MainScreen.tscn
 res://sand.tscn
 res://ss.tscn
-res://Stage.tscn
-res://User_Interface/EndScreen.tscn
+res://ff.tscn
 res://enemy/Enemy.tscn
+res://player/Player.tscn

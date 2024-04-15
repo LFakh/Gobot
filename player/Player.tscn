@@ -195,7 +195,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="11"]
-height = 44.4787
+radius = 28.835
+height = 57.67
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1")

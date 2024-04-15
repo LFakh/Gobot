@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dsww5lgq5jdj4"]
+[gd_scene load_steps=19 format=3 uid="uid://dsww5lgq5jdj4"]
 
 [ext_resource type="PackedScene" path="res://Portal2D.tscn" id="1_4j5sm"]
 [ext_resource type="PackedScene" uid="uid://hpq4vblxhyti" path="res://Stage.tscn" id="2_lc5bq"]
+[ext_resource type="PackedScene" uid="uid://cired57cg8weo" path="res://User_Interface/EndScreen.tscn" id="3_1r2us"]
 [ext_resource type="TileSet" uid="uid://cidfn2ymshqnt" path="res://TileS.tres" id="3_6idel"]
 [ext_resource type="PackedScene" uid="uid://cu8xf47uhn1mg" path="res://coin/Coin.tscn" id="4_xgaw6"]
 [ext_resource type="Script" path="res://platform/moving_platform.gd" id="5_erjo7"]
@@ -25,6 +26,9 @@ size = Vector2(200, 20)
 [node name="Portal2D" parent="." instance=ExtResource("1_4j5sm")]
 position = Vector2(6416, 2312)
 next_scene = ExtResource("2_lc5bq")
+
+[node name="EndScreen" parent="Portal2D" instance=ExtResource("3_1r2us")]
+visible = false
 
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = ExtResource("3_6idel")
@@ -155,7 +159,7 @@ polygon = PackedVector2Array(-88, -24, 88, -24, 88, 24, -88, 24)
 
 [node name="MovingPlatform2" type="Node2D" parent="."]
 modulate = Color(0.631373, 0.615686, 0.631373, 1)
-position = Vector2(5096, 2268)
+position = Vector2(5072, 2264)
 script = ExtResource("5_erjo7")
 motion = Vector2(175, 65)
 cycle = 4.2
@@ -170,6 +174,10 @@ texture = ExtResource("6_1mj0b")
 z_index = 1
 polygon = PackedVector2Array(-88, -24, 88, -24, 88, 24, -88, 24)
 
+[node name="Player" parent="." instance=ExtResource("8_4vfsk")]
+position = Vector2(144, 1168)
+collision_layer = 3
+
 [node name="enemy" type="Node" parent="."]
 
 [node name="Enemy" parent="enemy" instance=ExtResource("7_moued")]
@@ -179,10 +187,7 @@ position = Vector2(1034, 1144)
 position = Vector2(5576.93, 2148.17)
 
 [node name="Enemy3" parent="enemy" instance=ExtResource("7_moued")]
-position = Vector2(3247, 1672)
-
-[node name="Player" parent="." instance=ExtResource("8_4vfsk")]
-position = Vector2(192, 1152)
+position = Vector2(3214, 1488)
 
 [node name="Para" type="ParallaxBackground" parent="."]
 scale = Vector2(1.5, 1.5)
