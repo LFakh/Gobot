@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://l8munvf3qipg"]
+
+[ext_resource type="Script" path="res://Log_in.gd" id="1_qxwxk"]
+[ext_resource type="Texture2D" uid="uid://clobeskfw8akp" path="res://rocks.png" id="2_ayhkq"]
+
+[node name="Log_in" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qxwxk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 802.0
+offset_bottom = 481.0
+texture = ExtResource("2_ayhkq")
+
+[node name="Username" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 174.0
+offset_right = 502.0
+offset_bottom = 209.0
+placeholder_text = "			Username"
+
+[node name="Password" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 210.0
+offset_right = 502.0
+offset_bottom = 248.0
+placeholder_text = "			Password"
+
+[node name="Login" type="Button" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 249.0
+offset_right = 502.0
+offset_bottom = 280.0
+text = "Create Account"
+
+[connection signal="button_down" from="Login" to="." method="_on_login_button_down"]

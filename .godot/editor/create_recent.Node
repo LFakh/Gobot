@@ -1,3 +1,7 @@
+TextureRect
+Button
+TextEdit
+TextureButton
 Node
 TileMap
 CanvasLayer
