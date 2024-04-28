@@ -18,13 +18,13 @@ offset_right = 802.0
 offset_bottom = 481.0
 texture = ExtResource("2_ayhkq")
 
-[node name="Username" type="TextEdit" parent="."]
+[node name="Email" type="TextEdit" parent="."]
 layout_mode = 0
 offset_left = 308.0
 offset_top = 174.0
 offset_right = 502.0
 offset_bottom = 209.0
-placeholder_text = "			Username"
+placeholder_text = "				email"
 
 [node name="Password" type="TextEdit" parent="."]
 layout_mode = 0
@@ -38,8 +38,31 @@ placeholder_text = "			Password"
 layout_mode = 0
 offset_left = 308.0
 offset_top = 249.0
-offset_right = 502.0
+offset_right = 402.0
 offset_bottom = 280.0
-text = "Create Account"
+text = "Log in"
+
+[node name="SignUp" type="Button" parent="."]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 249.0
+offset_right = 502.0
+offset_bottom = 279.0
+text = "Sign up"
+
+[node name="Error" type="TextEdit" parent="."]
+modulate = Color(0.654902, 0.0313726, 0, 1)
+self_modulate = Color(0.74902, 0, 0.00392157, 1)
+layout_mode = 0
+offset_left = 305.0
+offset_top = 282.0
+offset_right = 502.0
+offset_bottom = 317.0
+scale = Vector2(1.02507, 0.717809)
+placeholder_text = "			____________"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [connection signal="button_down" from="Login" to="." method="_on_login_button_down"]
+[connection signal="button_down" from="SignUp" to="." method="_on_sign_up_button_down"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

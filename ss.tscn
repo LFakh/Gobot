@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dsww5lgq5jdj4"]
+[gd_scene load_steps=20 format=3 uid="uid://dsww5lgq5jdj4"]
 
 [ext_resource type="PackedScene" path="res://Portal2D.tscn" id="1_4j5sm"]
 [ext_resource type="PackedScene" uid="uid://hpq4vblxhyti" path="res://Stage.tscn" id="2_lc5bq"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b2fmefqynrlnp" path="res://enemy/Enemy.tscn" id="7_moued"]
 [ext_resource type="Texture2D" uid="uid://dh7rmirdwogj3" path="res://platform/one_way_PP.png" id="7_qocbh"]
 [ext_resource type="PackedScene" uid="uid://b1illhvyk7w4m" path="res://player/Player.tscn" id="8_4vfsk"]
+[ext_resource type="PackedScene" uid="uid://bbki5bgejqtxe" path="res://lava.tscn" id="9_tj8jf"]
 [ext_resource type="Texture2D" uid="uid://d1x0y8bmtng2x" path="res://background/scroll_bg_cloud_1.png" id="10_4fdl2"]
 [ext_resource type="Texture2D" uid="uid://dnbfjbfuftjxj" path="res://desert.png" id="10_870k4"]
 [ext_resource type="Texture2D" uid="uid://bwyy4ex46w50o" path="res://background/scroll_bg_cloud_2.png" id="11_lfygs"]
@@ -173,6 +174,10 @@ texture = ExtResource("6_1mj0b")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MovingPlatform2/Platform"]
 z_index = 1
 polygon = PackedVector2Array(-88, -24, 88, -24, 88, 24, -88, 24)
+
+[node name="Lava" parent="." instance=ExtResource("9_tj8jf")]
+position = Vector2(400, 2500)
+scale = Vector2(20003.8, 10.1456)
 
 [node name="Player" parent="." instance=ExtResource("8_4vfsk")]
 position = Vector2(144, 1168)

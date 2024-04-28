@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bvbfa2qf1x87t"]
+[gd_scene load_steps=17 format=3 uid="uid://bvbfa2qf1x87t"]
 
 [ext_resource type="PackedScene" path="res://Portal2D.tscn" id="1_if32f"]
 [ext_resource type="PackedScene" uid="uid://b1illhvyk7w4m" path="res://player/Player.tscn" id="2_84u1i"]
@@ -15,6 +15,7 @@
 [ext_resource type="TileSet" uid="uid://cidfn2ymshqnt" path="res://TileS.tres" id="11_5ls47"]
 [ext_resource type="PackedScene" uid="uid://nh657li2cc5c" path="res://platform/MovingPlatform.tscn" id="11_n68ny"]
 [ext_resource type="PackedScene" uid="uid://w4ccos5ofjoi" path="res://User_Interface/User_Interface.tscn" id="12_70b7q"]
+[ext_resource type="PackedScene" uid="uid://bbki5bgejqtxe" path="res://lava.tscn" id="16_r2irs"]
 
 [node name="gg" type="Node"]
 
@@ -168,3 +169,6 @@ layer_0/tile_data = PackedInt32Array(1638400, 5, 65536, 1638401, 5, 65536, 16384
 
 [node name="User_Interface" parent="CanvasLayer" instance=ExtResource("12_70b7q")]
 metadata/_edit_lock_ = true
+
+[node name="Lava" parent="." instance=ExtResource("16_r2irs")]
+position = Vector2(-1010, 2142)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://lo5t70bo6snu"]
+[gd_scene load_steps=13 format=3 uid="uid://lo5t70bo6snu"]
 
 [ext_resource type="TileSet" uid="uid://d4nvtpqlmhnar" path="res://TileSet.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://cu8xf47uhn1mg" path="res://coin/Coin.tscn" id="2"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b2fmefqynrlnp" path="res://enemy/Enemy.tscn" id="6"]
 [ext_resource type="PackedScene" uid="uid://chlp2sdjr1v6c" path="res://background/ParallBg.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://w4ccos5ofjoi" path="res://User_Interface/User_Interface.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://bbki5bgejqtxe" path="res://lava.tscn" id="8_7p0xp"]
 [ext_resource type="PackedScene" uid="uid://cired57cg8weo" path="res://User_Interface/EndScreen.tscn" id="9"]
 [ext_resource type="PackedScene" path="res://Portal2D.tscn" id="11"]
 
@@ -278,6 +279,9 @@ position = Vector2(1099.56, 940.804)
 [node name="OneWayPlatform13" parent="Props" instance=ExtResource("4")]
 modulate = Color(0.321569, 1, 0.360784, 1)
 position = Vector2(1339.63, 967.879)
+
+[node name="Lava" parent="." instance=ExtResource("8_7p0xp")]
+position = Vector2(8, 2304)
 
 [node name="Player" parent="." instance=ExtResource("5")]
 position = Vector2(216.893, 1036.21)
