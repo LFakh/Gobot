@@ -1,8 +1,8 @@
+HTTPRequest
 Area2D
 CollisionShape2D
 RigidBody2D
 TextEdit
-HTTPRequest
 Button
 TextureRect
 TextureButton

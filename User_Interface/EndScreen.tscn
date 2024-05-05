@@ -45,6 +45,8 @@ grow_vertical = 2
 text = "Congragulations, you finished the game
 You Scored %s"
 
+[node name="request_completed" type="HTTPRequest" parent="Title"]
+
 [node name="Menu" type="VBoxContainer" parent="."]
 layout_mode = 0
 anchor_left = 0.5
@@ -66,3 +68,5 @@ next_scene_path = "res://sand.tscn"
 
 [node name="Quit_BTN" parent="Menu" instance=ExtResource("6")]
 layout_mode = 2
+
+[connection signal="request_completed" from="Title/request_completed" to="." method="_on_http_request_request_completed"]
