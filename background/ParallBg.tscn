@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://chlp2sdjr1v6c"]
 
-[ext_resource type="Texture2D" uid="uid://c1ho5gus6mswk" path="res://image.png" id="1_135d0"]
+[ext_resource type="Texture2D" uid="uid://cfntkcwxgx4iu" path="res://c.png" id="1_hncfl"]
 [ext_resource type="Texture2D" uid="uid://d1x0y8bmtng2x" path="res://background/scroll_bg_cloud_1.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://bwyy4ex46w50o" path="res://background/scroll_bg_cloud_2.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://bbftglgbagek0" path="res://background/scroll_bg_cloud_3.png" id="4"]
@@ -13,12 +13,12 @@ transform = Transform2D(1.5, 0, 0, 1.5, 0, 0)
 scroll_base_scale = Vector2(0.5, 0)
 
 [node name="Sky" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(800, 0)
+motion_mirroring = Vector2(1100, 0)
 
 [node name="Desert" type="Sprite2D" parent="Sky"]
 position = Vector2(399.183, 238.154)
 scale = Vector2(1.10611, 1.06492)
-texture = ExtResource("1_135d0")
+texture = ExtResource("1_hncfl")
 
 [node name="Clouds" type="ParallaxLayer" parent="."]
 modulate = Color(0.427451, 0.866667, 0.45098, 1)

@@ -10,3 +10,6 @@ func _on_coin_body_enter(body):
 		($Anim as AnimationPlayer).play("taken")
 		taken = true
 		PlayerData.score += score
+		#this
+		emit_signal("coin_taken", score)
+		
