@@ -29,6 +29,8 @@ visible = false
 
 [node name="Player" parent="." instance=ExtResource("2_84u1i")]
 position = Vector2(158, 1559)
+collision_layer = 3
+collision_mask = 3
 
 [node name="coin" type="Node" parent="."]
 
@@ -57,12 +59,15 @@ position = Vector2(1241, 1667)
 
 [node name="Enemy2" parent="enemy" instance=ExtResource("3_18y83")]
 position = Vector2(323, 1543)
+collision_layer = 3
 
 [node name="Enemy3" parent="enemy" instance=ExtResource("3_18y83")]
 position = Vector2(1450, 1541)
+collision_layer = 3
 
 [node name="Enemy" parent="enemy" instance=ExtResource("3_18y83")]
 position = Vector2(1163, 1683)
+collision_layer = 3
 
 [node name="ParallaxBg" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2(0.7, 0)

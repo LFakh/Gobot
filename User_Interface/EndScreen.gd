@@ -10,7 +10,7 @@ func _on_request_completed():
 	emit_signal("request_completed")
 
 func updateScoreInFirebase():
-	#var url = "https://your-firebase-database-url.com/users/" + PlayerData.user_id + "/score.json"
+#	var url = "https://gubot-2f473-default-rtdb.firebaseio.com/users/" + PlayerData.user_id + "/score.json"
 	var body = {'score': PlayerData.score}
 	var headers = {'Content-Type': 'application/json'}
 	var request = HTTPRequest.new()

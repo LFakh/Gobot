@@ -277,7 +277,7 @@ motion = Vector2(100, 0)
 cycle = 4.0
 
 [node name="Player" parent="." instance=ExtResource("5")]
-position = Vector2(70, 982)
+position = Vector2(178, 981)
 collision_layer = 3
 
 [node name="Enemies" type="Node" parent="."]
